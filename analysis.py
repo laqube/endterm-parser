@@ -14,7 +14,12 @@ collection = db["olx"]
 # labels = ['Бизнес', 'Жеке адам']
 # counts = [business_count, individual_count]
 
-# # Query the collection for the average price of documents with tag "Бизнес"
+
+# business_avg = business_price_sum / business_count if business_count > 0 else 0
+
+# plt.show()
+
+# Query the collection for the average price of documents with tag "Бизнес"
 # business_docs = collection.find({"Tags": "Бизнес"})
 # business_price_sum = 0
 # business_count = 0
@@ -84,7 +89,7 @@ collection = db["olx"]
 # plt.title("Prices of Business and Personal Products")
 # plt.show()
 
-# Query the data
+# ____________DOT GRAPH: NEW/USED_________Dangerous!
 new_products = []
 used_products = []
 for product in collection.find({"Tags": "Күйі: Жаңа"}):
